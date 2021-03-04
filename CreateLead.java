@@ -14,9 +14,8 @@ public class CreateLead {
 		// System.setProperty("webdriver.chrome.driver","./driver/chromedriver_88.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://leaftaps.com/opentaps/control/main");
-
 		driver.findElementById("username").sendKeys("demosalesmanager");
 		driver.findElementById("password").sendKeys("crmsfa");
 		driver.findElementByClassName("decorativeSubmit").click();
@@ -29,6 +28,7 @@ public class CreateLead {
 	    driver.findElementById("createLeadForm_lastName").sendKeys("Khan");
 	    driver.findElementByClassName("smallSubmit").click();
 	    driver.close();
+	
 	}
 
 }
